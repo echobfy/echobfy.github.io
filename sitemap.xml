@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/douban/index.html</loc>
+    <lastmod>2016-03-31T11:38:33.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/03/31/Python%E4%B8%AD%E7%9A%84logging/</loc>
+    <lastmod>2016-03-31T08:21:43.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/me/index.html</loc>
     <lastmod>2016-03-31T01:58:13.000Z</lastmod>
   </url>

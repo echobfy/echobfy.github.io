@@ -4,18 +4,44 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>ZooKeeper | Echobfy</title>
+  <title>Python中的logging | Echobfy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ZooKeeper好玩吗">
+  <meta name="description" content="官网解析
+logging库提供了四个基本的组件：
+
+loggers ：   暴露接口给应用程序代码直接使用
+Handlers：   发送log记录（由loggers创建）到合适的目的地
+Filters ：   提供了一种细粒度的机制来决定一条log记录是否应该输出
+Formatters： 指定log记录输出的格式
+
+log事件信息以LogRecord实例为载体在loggers、handlers、f">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ZooKeeper">
-<meta property="og:url" content="http://yoursite.com/2016/03/30/ZooKeeper/index.html">
+<meta property="og:title" content="Python中的logging">
+<meta property="og:url" content="http://yoursite.com/2016/03/31/Python中的logging/index.html">
 <meta property="og:site_name" content="Echobfy">
-<meta property="og:description" content="ZooKeeper好玩吗">
-<meta property="og:updated_time" content="2016-03-30T14:34:07.000Z">
+<meta property="og:description" content="官网解析
+logging库提供了四个基本的组件：
+
+loggers ：   暴露接口给应用程序代码直接使用
+Handlers：   发送log记录（由loggers创建）到合适的目的地
+Filters ：   提供了一种细粒度的机制来决定一条log记录是否应该输出
+Formatters： 指定log记录输出的格式
+
+log事件信息以LogRecord实例为载体在loggers、handlers、f">
+<meta property="og:image" content="https://docs.python.org/2/_images/logging_flow.png">
+<meta property="og:updated_time" content="2016-03-31T08:21:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZooKeeper">
-<meta name="twitter:description" content="ZooKeeper好玩吗">
+<meta name="twitter:title" content="Python中的logging">
+<meta name="twitter:description" content="官网解析
+logging库提供了四个基本的组件：
+
+loggers ：   暴露接口给应用程序代码直接使用
+Handlers：   发送log记录（由loggers创建）到合适的目的地
+Filters ：   提供了一种细粒度的机制来决定一条log记录是否应该输出
+Formatters： 指定log记录输出的格式
+
+log事件信息以LogRecord实例为载体在loggers、handlers、f">
+<meta name="twitter:image" content="https://docs.python.org/2/_images/logging_flow.png">
   
     <link rel="alternative" href="/atom.xml" title="Echobfy" type="application/atom+xml">
   
@@ -205,11 +231,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-ZooKeeper" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Python中的logging" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/30/ZooKeeper/" class="article-date">
-  	<time datetime="2016-03-30T13:46:55.000Z" itemprop="datePublished">2016-03-30</time>
+      <a href="/2016/03/31/Python中的logging/" class="article-date">
+  	<time datetime="2016-03-31T08:19:32.000Z" itemprop="datePublished">2016-03-31</time>
 </a>
     </div>
   
@@ -222,7 +248,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ZooKeeper
+      Python中的logging
     </h1>
   
 
@@ -231,7 +257,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ZooKeeper/">ZooKeeper</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
 	</div>
 
         
@@ -242,7 +268,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="ZooKeeper好玩吗"><a href="#ZooKeeper好玩吗" class="headerlink" title="ZooKeeper好玩吗"></a>ZooKeeper好玩吗</h1>
+        <p><a href="https://docs.python.org/2/howto/logging.html" target="_blank" rel="external">官网解析</a></p>
+<p>logging库提供了四个基本的组件：</p>
+<ul>
+<li>loggers ：   暴露接口给应用程序代码直接使用</li>
+<li>Handlers：   发送log记录（由loggers创建）到合适的目的地</li>
+<li>Filters ：   提供了一种细粒度的机制来决定一条log记录是否应该输出</li>
+<li>Formatters： 指定log记录输出的格式</li>
+</ul>
+<p>log事件信息以LogRecord实例为载体在loggers、handlers、filters、formatters之间传递。</p>
+<p>默认情况下，没有为logging设置handlers。可以通过使用basicConfig()指定一个默认的handler。<br>如果调用了debug(), info(), warning(), error()或者critical()函数，它们默认会检查root logger是否有设置了handler，如果没有，则默认设置为console用于输出log信息。</p>
+<h2 id="Logging-Flow"><a href="#Logging-Flow" class="headerlink" title="Logging Flow"></a>Logging Flow</h2><p><img src="https://docs.python.org/2/_images/logging_flow.png" alt=""></p>
+<h2 id="loggers"><a href="#loggers" class="headerlink" title="loggers"></a>loggers</h2><p>Logger实例有三个主要的功能：1、暴露给应用程序一些接口，让它们可以在运行时log信息；2、logger实例基于Log Level和Filter实例决定了哪些log信息应该起作用；3、logger实例将相关的log信息传递到对其感兴趣的handler对象中。</p>
+<p>Logger中常见的一些配置方法：</p>
+<ul>
+<li><code>Logger.setLevel()</code>指定了该logger会处理的最低等级的log信息。<code>debug</code>为内嵌的最低等级，<code>critical</code>为内嵌的最高等级。例如，如果等级设置为INFO，那么该logger会处理INFO, WARNING, ERROR, CRITICAL消息，忽略DEBUG信息。</li>
+<li><code>Logger.addHandler()</code>和<code>Logger.removeHandler()</code></li>
+<li><code>Logger.addFilter()</code>和<code>Logger.removeFilter()</code></li>
+</ul>
+<h2 id="Handler"><a href="#Handler" class="headerlink" title="Handler"></a>Handler</h2><p>Handler实例基于log信息的等级负责发送合适的log信息到指定的目的地。Logger实例可以使用addHandler()方法添加一个或者多个的handler实例。一个典型的场景就是，一个应用程序可能会期望所有的log信息记录到文件中，但只要error或者更高的信息发送到标准输出中，critical信息发送到邮件里。该场景要求三个独立的handler，每个handler负责发送特定等级的log信息到指定的位置。</p>
+<ul>
+<li><code>setLevel()</code>，正如在Logger对象中一样，指定了该handler会处理的最低等级log信息。</li>
+<li><code>setFormatter()</code></li>
+<li><code>addFilter()</code>和<code>removeFilter()</code></li>
+</ul>
+
       
     </div>
     
@@ -251,15 +301,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/03/31/Python中的logging/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Python中的logging
-        
-      </div>
-    </a>
   
+    <a href="/2016/03/30/ZooKeeper/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ZooKeeper</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -292,7 +338,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="ZooKeeper" data-title="ZooKeeper" data-url="http://yoursite.com/2016/03/30/ZooKeeper/"></div>
+	<div class="ds-thread" data-thread-key="Python中的logging" data-title="Python中的logging" data-url="http://yoursite.com/2016/03/31/Python中的logging/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
